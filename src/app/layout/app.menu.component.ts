@@ -10,7 +10,8 @@ export class AppMenuComponent implements OnInit {
     model: any[] = [];
 
     ngOnInit() {
-        this.model = [
+        this.model = []
+        /*this.model = [
             {
                 label: 'Dashboards',
                 icon: 'pi pi-home',
@@ -492,6 +493,6 @@ export class AppMenuComponent implements OnInit {
                     }
                 ]
             }
-        ];
+        ];*/
     }
 }
