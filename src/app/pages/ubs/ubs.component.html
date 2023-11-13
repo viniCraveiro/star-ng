@@ -1,1 +1,24 @@
-<p>ubs works!</p>
+<p-table [value]="ubss" [tableStyle]="{'min-width': '60rem'}">
+    <ng-template pTemplate="caption">
+        <div class="flex align-items-center justify-content-between">
+            UBS
+            <p-button icon="pi pi-refresh"></p-button>
+        </div>
+    </ng-template>
+    <ng-template pTemplate="header">
+        <tr>
+            <th>Nome</th>
+            <th>Imagem</th>
+            <th>Endereço</th>
+            <th>Telefone</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-ubs>
+        <tr>
+            <td>{{ubs.nome}}</td>
+            <td>Imagem da UBS</td>
+            <td>{{ubs.endereco}}</td>
+            <td>{{ubs.telefone}}</td>
+        </tr>
+    </ng-template>
+</p-table>
