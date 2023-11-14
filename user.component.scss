@@ -1,0 +1,12 @@
+/* Estilizando os inputs para ocupar metade da largura do contêiner */
+input {
+    width: 500%;
+    max-width: 300px; /* Adicione um valor máximo para evitar que os inputs fiquem muito largos em telas grandes */
+}
+
+/* Estilizando o contêiner principal para centralizar o conteúdo */
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
