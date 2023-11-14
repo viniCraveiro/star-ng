@@ -1,22 +1,18 @@
-
-
-
-
 <p-table [value]="medics" [tableStyle]="{'min-width': '50rem'}">
     <ng-template pTemplate="header" let-columns>
         <tr>
-            <th>Nome </th>
+            <th>Nome</th>
             <th>Cargo</th>
-            <th>Horario Disponiveis</th>
+            <th>Observacao</th>
             <th>Status</th>
         </tr>
     </ng-template>
-    <ng-template pTemplate="body" let-medics let-columns="columns">
+    <ng-template pTemplate="body" let-medic>
         <tr>
-            <td>{{medics.nome}}</td>
-            <td>{{medics.cargo}}</td>
-            <td>{{medics.horario}}</td>
-            <td><p-tag [value]="medics.status" [severity]="getSeverity(medics.status)"></p-tag></td>
+            <td>{{medic.nome}}</td>
+            <td>{{medic.cargo}}</td>
+            <td>{{medic.observacao}}</td>
+            <td><p-tag [value]="medic.status" [severity]="getSeverity(medic.status)"></p-tag></td>
         </tr>
     </ng-template>
 </p-table>

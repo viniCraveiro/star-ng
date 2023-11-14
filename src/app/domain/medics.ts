@@ -3,6 +3,5 @@ export interface Medics {
     nome?: string;
     cargo?: string;
     status?: string;
-    horario?: string;
+    observacao?: string;
 }
-

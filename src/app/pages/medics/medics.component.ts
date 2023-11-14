@@ -15,24 +15,24 @@ interface Column {
 })
 
 export class MedicsComponent implements OnInit{
-  medics!: Medics[];
+    medics: Medics[] = [];
+
 
   cols!: Column[];
 
-  constructor(private productService: MedicsService) {}
+  constructor(private medicsService: MedicsService) {}
 
   ngOnInit() {
-      this.productService.getProductsMini().then((data) => {
-          console.log(data);
-          this.medics = data;
-      });
+    this.medicsService.getFuncionarios().subscribe((data: any) => {
+        console.log(data); 
+        this.medics = data.content; 
+    });
 
       this.cols = [
           { field: 'nome', header: 'Nome' },
           { field: 'cargo', header: 'Cargo' },
           { field: 'status', header: 'Status' },
-          { field: 'inventoryStatus', header: 'Status' },
-          { field: 'horario', header: 'Horario' }
+          { field: 'observacao', header: 'Observacao' }
       ];
   }
 
