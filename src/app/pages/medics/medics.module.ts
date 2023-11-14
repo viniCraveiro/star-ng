@@ -3,6 +3,11 @@ import { CommonModule } from '@angular/common';
 
 import { MedicsRoutingModule } from './medics-routing.module';
 import { MedicsComponent } from './medics.component';
+import { TableModule } from 'primeng/table';
+import { RatingModule } from 'primeng/rating';
+import { FormsModule } from '@angular/forms';
+import { MedicsService } from 'src/app/service/medicsService';
+import { TagModule } from 'primeng/tag';
 
 
 @NgModule({
@@ -11,7 +16,12 @@ import { MedicsComponent } from './medics.component';
   ],
   imports: [
     CommonModule,
-    MedicsRoutingModule
-  ]
+    MedicsRoutingModule,
+    TableModule,
+    RatingModule,
+    FormsModule,
+    TagModule
+  ],
+  providers: [MedicsService]
 })
 export class MedicsModule { }
