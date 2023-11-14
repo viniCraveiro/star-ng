@@ -1,0 +1,66 @@
+<body>
+    <h1>Medicamentos Disponíveis</h1>
+    <div class="card flex justify-content-center">
+        <p-autoComplete
+            [(ngModel)]="selectedItem"
+            [suggestions]="suggestions"
+            (completeMethod)="search($event)"
+        ></p-autoComplete>
+    </div>
+    <ul>
+        <li>
+            <h2>Paracetamol</h2>
+            <ul>
+                <li>Tipo: Analgésico e Antitérmico</li>
+                <li>
+                    Dosagem Recomendada: 500mg a 1000mg a cada 4 a 6 horas,
+                    conforme necessário
+                </li>
+            </ul>
+        </li>
+
+        <li>
+            <h2>Ibuprofeno</h2>
+            <ul>
+                <li>Tipo: Anti-inflamatório não esteroide (AINE)</li>
+                <li>
+                    Dosagem Recomendada: 200mg a 400mg a cada 4 a 6 horas,
+                    conforme necessário
+                </li>
+            </ul>
+        </li>
+
+        <li>
+            <h2>Amoxicilina</h2>
+            <ul>
+                <li>Tipo: Antibiótico</li>
+                <li>
+                    Dosagem Recomendada: Depende da condição a ser tratada,
+                    geralmente 250mg a 500mg a cada 8 horas
+                </li>
+            </ul>
+        </li>
+
+        <li>
+            <h2>Dipirona</h2>
+            <ul>
+                <li>Tipo: Analgésico e Antipirético</li>
+                <li>
+                    Dosagem Recomendada: 500mg a 1000mg a cada 4 a 6 horas,
+                    conforme necessário
+                </li>
+            </ul>
+        </li>
+
+        <li>
+            <h2>Omeprazol</h2>
+            <ul>
+                <li>Tipo: Inibidor de bomba de prótons (IBP)</li>
+                <li>
+                    Dosagem Recomendada: 20mg a 40mg por dia, de manhã antes do
+                    café
+                </li>
+            </ul>
+        </li>
+    </ul>
+</body>
