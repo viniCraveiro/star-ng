@@ -1,1 +1,48 @@
-<p>user works!</p>
+<div class=" items-center justify-center h-screen " >
+    <div class="surface-card p-4 shadow-2 border-round w-full lg:w-6 mx-auto">
+      <div class="text-center mb-5">
+        <img src="https://cdn-icons-png.flaticon.com/512/5987/5987462.png" alt="Image" height="50" class="mb-3">
+        <div class="text-900 text-3xl font-medium mb-3">Cadastrar Usuario</div>
+      </div>
+  
+      <div>
+        <label for="nome" class="block text-900 font-medium mb-2">Nome</label>
+        <input id="nome" type="text" placeholder="Nome" pInputText class="w-full mb-3">
+  
+        <label for="cardSus" class="block text-900 font-medium mb-2">Cartão SUS</label>
+        <input id="cardSus" type="text" placeholder="000 0000 0000 0000" pInputText class="w-full mb-3">
+  
+        <label for="dataNasc" class="block text-900 font-medium mb-2">Data de Nascimento</label>
+        <form>
+          <p-calendar formControlName="dataNasc" class="w-1/2"></p-calendar>
+        </form>
+  
+        <div class="flex flex-row gap-4">
+          <div class="w-full lg:w-1/2">
+            <label for="rua" class="block text-900 font-medium mb-2">Rua</label>
+            <input id="rua" type="text" placeholder="Rua." pInputText class="w-full mb-3">
+          </div>
+  
+          <div class="w-full lg:w-1/2">
+            <label for="cep" class="block text-900 font-medium mb-2">CEP</label>
+            <input id="cep" type="text" placeholder="00000-000" pInputText class="w-full mb-3">
+          </div>
+        </div>
+  
+        <div class="flex flex-row gap-4">
+          <div class="w-full lg:w-1/2">
+            <label for="numero" class="block text-900 font-medium mb-2">Número</label>
+            <input id="numero" type="text" placeholder="000" pInputText class="w-full mb-3">
+          </div>
+  
+          <div class="w-full lg:w-1/2">
+            <label for="complemento" class="block text-900 font-medium mb-2">Complemento</label>
+            <input id="complemento" type="text" placeholder="Outros" pInputText class="w-full mb-3">
+          </div>
+        </div>
+  
+        <button pButton pRipple label="Cadastrar" icon="pi pi-user" class="w-full"></button>
+      </div>
+    </div>
+  </div>
+  
