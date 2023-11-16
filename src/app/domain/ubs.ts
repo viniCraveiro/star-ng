@@ -1,7 +1,15 @@
 export interface UBS {
-    id?: number;
-    nome?: string;
+    id: number;
+    nome: string;
     sigla?: string;
-    telefone?: string;
-    endereco?: string;
-}
+    endereco?: {
+      rua: string;
+      numero: string;
+      complemento: string;
+      codigoPostal: string;
+      estado: string;
+      pais: string;
+      bairro: string;
+      cidade: string;
+    };
+  }

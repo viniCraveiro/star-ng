@@ -1,4 +1,19 @@
-<p-table [value]="ubss" [tableStyle]="{'min-width': '60rem'}">
+<div class="p-inputgroup">
+    <button type="button" pButton label="Buscar" (click)="performSearch()"></button>
+    <p-autoComplete
+        *ngIf="searchForm.get('searchTerm')"
+        [(ngModel)]="selectedItem"
+        [suggestions]="suggestions"
+        (completeMethod)="search($event)"
+        [style]="{'width':'100%'}"
+        [inputStyle]="{'width':'100%'}"
+        class="p-autocomplete"
+        [formControl]="$any(searchForm.get('searchTerm'))">
+    </p-autoComplete>
+</div>
+
+<br>
+<p-table [value]="ubss" [tableStyle]="{'width': '100%'}" class="p-responsive">
     <ng-template pTemplate="caption">
         <div class="flex align-items-center justify-content-between">
             UBS
@@ -8,17 +23,19 @@
     <ng-template pTemplate="header">
         <tr>
             <th>Nome</th>
+            <th>Sigla</th>
             <th>Imagem</th>
             <th>Endereço</th>
-            <th>Telefone</th>
         </tr>
     </ng-template>
     <ng-template pTemplate="body" let-ubs>
         <tr>
             <td>{{ubs.nome}}</td>
+            <td>{{ubs.sigla}}</td>
             <td>Imagem da UBS</td>
-            <td>{{ubs.endereco}}</td>
-            <td>{{ubs.telefone}}</td>
+            <td>{{getEndereco(ubs.endereco)}}</td>
         </tr>
     </ng-template>
 </p-table>
+
+

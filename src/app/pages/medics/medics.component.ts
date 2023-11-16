@@ -15,9 +15,7 @@ interface Column {
 })
 
 export class MedicsComponent implements OnInit{
-    medics: Medics[] = [];
-
-
+  medics: Medics[] = [];
   cols!: Column[];
 
   constructor(private medicsService: MedicsService) {}
