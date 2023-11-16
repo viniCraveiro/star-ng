@@ -4,6 +4,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AppLayoutModule } from './layout/app.layout.module';
 import { SplitterModule } from 'primeng/splitter';
+import { MessageService } from 'primeng/api';
+import { MessagesModule } from 'primeng/messages';
 
 @NgModule({
     declarations: [
@@ -15,7 +17,8 @@ import { SplitterModule } from 'primeng/splitter';
         SplitterModule
     ],
     providers: [
-        { provide: LocationStrategy, useClass: HashLocationStrategy }
+        { provide: LocationStrategy, useClass: HashLocationStrategy },
+        MessageService,
     ],
     bootstrap: [AppComponent]
 })

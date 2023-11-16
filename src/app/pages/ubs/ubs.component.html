@@ -1,14 +1,8 @@
 <div class="p-inputgroup">
     <button type="button" pButton label="Buscar" (click)="performSearch()"></button>
-    <p-autoComplete
-        *ngIf="searchForm.get('searchTerm')"
-        [(ngModel)]="selectedItem"
-        [suggestions]="suggestions"
-        (completeMethod)="search($event)"
-        [style]="{'width':'100%'}"
-        [inputStyle]="{'width':'100%'}"
-        class="p-autocomplete"
-        [formControl]="$any(searchForm.get('searchTerm'))">
+    <p-autoComplete *ngIf="searchForm.get('searchTerm')" [(ngModel)]="selectedItem" [suggestions]="suggestions"
+        (completeMethod)="search($event)" [style]="{'width':'100%'}" [inputStyle]="{'width':'100%'}"
+        class="p-autocomplete" [formControl]="$any(searchForm.get('searchTerm'))">
     </p-autoComplete>
 </div>
 
@@ -26,16 +20,16 @@
             <th>Sigla</th>
             <th>Imagem</th>
             <th>Endereço</th>
+            <th></th>
         </tr>
     </ng-template>
-    <ng-template pTemplate="body" let-ubs>
+    <ng-template pTemplate="body" let-ubs let-index="rowIndex">
         <tr>
             <td>{{ubs.nome}}</td>
             <td>{{ubs.sigla}}</td>
             <td>Imagem da UBS</td>
             <td>{{getEndereco(ubs.endereco)}}</td>
+            <td><button pButton class="p-button-text" icon="pi pi-trash" (click)="removeUbs(ubs)"></button></td>
         </tr>
     </ng-template>
 </p-table>
-
-

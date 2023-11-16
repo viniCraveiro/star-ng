@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { UbsService } from 'src/app/service/ubsService'; 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { UbsRoutingModule } from './ubs-routing.module';
@@ -9,6 +8,7 @@ import { TableModule } from 'primeng/table';
 import { ButtonModule } from 'primeng/button';
 import { InputTextModule } from 'primeng/inputtext';
 import { AutoCompleteModule } from 'primeng/autocomplete';
+import { MessageService } from 'primeng/api';
 
 @NgModule({
   declarations: [
@@ -24,6 +24,6 @@ import { AutoCompleteModule } from 'primeng/autocomplete';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [UbsService]
+  providers: []
 })
 export class UbsModule { }
