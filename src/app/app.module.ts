@@ -6,6 +6,7 @@ import { AppLayoutModule } from './layout/app.layout.module';
 import { SplitterModule } from 'primeng/splitter';
 import { MessageService } from 'primeng/api';
 import { MessagesModule } from 'primeng/messages';
+import { ToastModule } from 'primeng/toast';
 
 @NgModule({
     declarations: [
@@ -14,7 +15,6 @@ import { MessagesModule } from 'primeng/messages';
     imports: [
         AppRoutingModule,
         AppLayoutModule,
-        SplitterModule
     ],
     providers: [
         { provide: LocationStrategy, useClass: HashLocationStrategy },

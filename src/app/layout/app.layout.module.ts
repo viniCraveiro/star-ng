@@ -25,6 +25,7 @@ import { MegaMenuModule } from 'primeng/megamenu';
 import { ButtonModule } from 'primeng/button';
 import { MenuModule } from 'primeng/menu';
 import { StyleClassModule } from 'primeng/styleclass';
+import { ToastModule } from 'primeng/toast';
 
 @NgModule({
     declarations: [
@@ -55,7 +56,8 @@ import { StyleClassModule } from 'primeng/styleclass';
         RouterModule,
         ButtonModule,
         MenuModule,
-        AppConfigModule
+        AppConfigModule,
+        ToastModule,
     ]
 })
 export class AppLayoutModule { }

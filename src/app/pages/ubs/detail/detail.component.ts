@@ -13,7 +13,7 @@ export class DetailComponent {
 
     unidadeBasicaSaude: UBS = { id: 0, nome: null, sigla: null, endereco: { bairro: null, cidade: null, estado: null, numero: null, pais: null, rua: null, codigoPostal: null, complemento: null } }
 
-    constructor(private ubsService: UbsService, protected messageService: MessageService, protected route: Router) {
+    constructor(private ubsService: UbsService, protected messageService: MessageService, protected route: Router, protected toastMessage: MessageService) {
 
     }
 
@@ -25,7 +25,7 @@ export class DetailComponent {
             this.ubsService.criaUbs(this.unidadeBasicaSaude).subscribe({
                 next: value => {
                     this.messageService.add({ severity: 'success', summary: 'Criado com sucesso.' })
-                    this.route.navigate(['../'])
+                    this.route.navigate(['../ubs'])
                 },
                 error: er => {
                     this.messageService.add({ severity: 'error', summary: 'Erro ao cadastrar.' })
