@@ -4,7 +4,7 @@
         (completeMethod)="search($event)" [style]="{'width':'100%'}" [inputStyle]="{'width':'80%'}"
         class="p-autocomplete" [formControl]="$any(searchForm.get('searchTerm'))">
     </p-autoComplete>
-    <button pButton class="p-button-success" label="Criar" routerLink="./detail"></button>
+    <button pButton class="p-button-success" label="Criar" routerLink="./detail/new"></button>
 </div>
 
 <br>
@@ -30,7 +30,10 @@
             <td>{{ubs.sigla}}</td>
             <td>Imagem da UBS</td>
             <td>{{getEndereco(ubs.endereco)}}</td>
-            <td><button pButton class="p-button-text" icon="pi pi-trash" (click)="removeUbs(ubs)"></button></td>
+            <td>
+                <button pButton class="p-button-text" icon="pi pi-pencil" [routerLink]="'./detail/'+ubs.id"></button>
+                <button pButton class="p-button-text" icon="pi pi-trash" (click)="removeUbs(ubs)"></button>
+            </td>
         </tr>
     </ng-template>
 </p-table>

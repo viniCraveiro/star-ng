@@ -20,6 +20,7 @@ interface AutoCompleteCompleteEvent {
     styleUrls: ['./ubs.component.scss']
 })
 export class UbsComponent implements OnInit {
+
     ubss: UBS[] = [];
     unidadeBasicaSaude: UBS = { id: 0, nome: '', sigla: '', endereco: { bairro: '', cidade: '', estado: '', numero: '', pais: '', rua: '', codigoPostal: '', complemento: '' } }
     searchForm!: FormGroup;
@@ -77,11 +78,10 @@ export class UbsComponent implements OnInit {
             },
             error: er => {
                 this.ubss = [];
-                this.messageService.add({ severity: 'error', summary: 'Nenhum resultado', detail: 'Nenhuma UBS encontrada com o nome: ' + nome })
+                // this.messageService.add({ severity: 'error', summary: 'Nenhum resultado', detail: 'Nenhuma UBS encontrada com o nome: ' + nome })
             }
         });
     }
-
 
     removeUbs(index: UBS) {
         this.ubsService.removeUbs(index.id).subscribe({

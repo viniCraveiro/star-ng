@@ -7,13 +7,14 @@ import { UBS } from '../../domain/ubs';
     providedIn: 'root'
 })
 export class UbsService {
+
     constructor(private http: HttpClient) { }
 
     urlapi = 'http://localhost:8080';
 
     isSearching = false;
 
-    listAll(){
+    listAll() {
         return this.http.get<UBS[]>(`${this.urlapi}/ubs`);
     }
 
@@ -27,6 +28,10 @@ export class UbsService {
 
     criaUbs(ubs: UBS): Observable<UBS> {
         return this.http.post<UBS>(`${this.urlapi}/ubs`, ubs);
+    }
+
+    getUbsById(id: number) {
+        return this.http.get<UBS>(`${this.urlapi}/ubs/${id}`);
     }
 }
 
