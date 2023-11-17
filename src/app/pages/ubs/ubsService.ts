@@ -24,6 +24,10 @@ export class UbsService {
     removeUbs(id: number): Observable<any> {
         return this.http.delete(`${this.urlapi}/ubs/${id}`);
     }
+
+    criaUbs(ubs: UBS): Observable<UBS> {
+        return this.http.post<UBS>(`${this.urlapi}/ubs`, ubs);
+    }
 }
 
 /*

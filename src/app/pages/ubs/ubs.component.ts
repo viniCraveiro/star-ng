@@ -21,6 +21,7 @@ interface AutoCompleteCompleteEvent {
 })
 export class UbsComponent implements OnInit {
     ubss: UBS[] = [];
+    unidadeBasicaSaude: UBS = { id: 0, nome: '', sigla: '', endereco: { bairro: '', cidade: '', estado: '', numero: '', pais: '', rua: '', codigoPostal: '', complemento: '' } }
     searchForm!: FormGroup;
     selectedItem: any;
     suggestions: any[] = [];

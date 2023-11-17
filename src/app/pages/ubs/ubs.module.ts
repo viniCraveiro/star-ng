@@ -9,10 +9,12 @@ import { ButtonModule } from 'primeng/button';
 import { InputTextModule } from 'primeng/inputtext';
 import { AutoCompleteModule } from 'primeng/autocomplete';
 import { MessageService } from 'primeng/api';
+import { DetailComponent } from './detail/detail.component';
 
 @NgModule({
   declarations: [
-    UbsComponent
+    UbsComponent,
+    DetailComponent
   ],
   imports: [
     CommonModule,

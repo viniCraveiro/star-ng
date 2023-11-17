@@ -1,9 +1,10 @@
 <div class="p-inputgroup">
     <button type="button" pButton label="Buscar" (click)="performSearch()"></button>
     <p-autoComplete *ngIf="searchForm.get('searchTerm')" [(ngModel)]="selectedItem" [suggestions]="suggestions"
-        (completeMethod)="search($event)" [style]="{'width':'100%'}" [inputStyle]="{'width':'100%'}"
+        (completeMethod)="search($event)" [style]="{'width':'100%'}" [inputStyle]="{'width':'80%'}"
         class="p-autocomplete" [formControl]="$any(searchForm.get('searchTerm'))">
     </p-autoComplete>
+    <button pButton class="p-button-success" label="Criar" routerLink="./detail"></button>
 </div>
 
 <br>
